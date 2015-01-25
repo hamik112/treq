@@ -110,5 +110,5 @@ def _client(*args, **kwargs):
     pool = default_pool(reactor,
                         kwargs.get('pool'),
                         kwargs.get('persistent'))
-    agent = Agent(reactor, pool=pool)
+    agent = Agent(reactor, pool=pool, **kwargs)
     return HTTPClient(agent)
